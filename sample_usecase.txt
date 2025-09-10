@@ -1,0 +1,65 @@
+Problem 1 - Natural Language Query System with Role-Based Access Control 
+
+Background - 
+
+In many real-world systems, users may hold one or more roles, each with specific access permissions to sensitive data. Ensuring that users can interact with data using natural language while maintaining strict Role-Based Access Control (RBAC) is a challenging and critical task. 
+
+Problem Statement - 
+
+You are tasked with developing a Natural Language Query (NLQ) interface for a SQL database that enforces RBAC (Role-Based Access Control) rules. 
+
+System Overview - 
+
+Each user in the system can have one or more of the following roles - 
+
+Role 1 
+
+Role 2 
+
+Role 3 
+
+The SQL database contains three tables, with access rules defined as follows - 
+
+Table 1 - 
+
+Contains a sensitive column - SSN 
+
+No role is allowed to read the SSN column. 
+
+Role 1, Role 2, and Role 3 are allowed to read all other columns in this table. 
+
+Table 2 - 
+
+Only Role 1 and Role 3 are allowed to read from this table. 
+
+Table 3 - 
+
+Only Role 2 and Role 3 are allowed to read from this table. 
+
+Your Task - 
+
+Design and implement a system that allows users to query the database using natural language (e.g., "Show me the list of users without SSNs") while ensuring the following - 
+
+RBAC Enforcement - Users can only access the tables and columns permitted by their roles. 
+
+SSN Protection - Even with valid roles, no user should be able to access the SSN column under any circumstance. 
+
+Accurate Query Translation - The system should correctly translate natural language questions into SQL queries that comply with the user’s permissions. 
+
+Role Awareness - The system should dynamically adjust query responses based on the user’s role(s). 
+
+Evaluation Criteria - 
+
+Accuracy of natural language to SQL translation. 
+
+Correct enforcement of RBAC rules and data masking. 
+
+Usability of the interface. 
+
+Innovation in design or implementation. 
+
+Bonus 
+
+Consider adding features like query audit logs, dynamic role simulation, or explanations for access denials. 
+
+ 
